@@ -2,7 +2,7 @@
    "name": "nextjs-cors",
    "version": "1.0.0",
    "private": false,
-   "description": "",
+   "description": "nextjs-cors is a node.js package to provide a Connect/Express middleware that can be used to enable CORS with various options.",
    "keywords": [
       "nextjs-cors",
       "express-cors",
