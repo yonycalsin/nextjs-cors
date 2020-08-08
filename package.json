@@ -27,9 +27,12 @@
    },
    "devDependencies": {
       "@types/cors": "^2.8.7",
+      "nodemon": "^2.0.4",
       "prettier": "^2.0.5",
       "prettier-plugin-organize-imports": "^1.1.1",
       "prettier-plugin-packagejson": "^2.2.5",
+      "rimraf": "^3.0.2",
+      "ts-node": "^8.10.2",
       "typescript": "^3.9.7"
    }
 }
