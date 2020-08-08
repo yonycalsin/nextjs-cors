@@ -1,0 +1,9 @@
+{
+  "name": "nextjs-cors",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/yonicalsin/nextjs-cors.git",
+  "author": "Yoni Calsin <helloyonicb@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
