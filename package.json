@@ -19,6 +19,7 @@
    "license": "MIT",
    "author": "Yoni Calsin <helloyonicb@gmail.com>",
    "main": "index.js",
+   "types": "index.d.ts",
    "scripts": {
       "build": "tsc",
       "clean": "rimraf index.js",
