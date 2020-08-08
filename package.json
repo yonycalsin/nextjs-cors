@@ -2,7 +2,20 @@
    "name": "nextjs-cors",
    "version": "1.0.0",
    "private": false,
-   "repository": "https://github.com/yonicalsin/nextjs-cors.git",
+   "description": "",
+   "keywords": [
+      "nextjs-cors",
+      "express-cors",
+      "nextjs-express-cors"
+   ],
+   "homepage": "https://github.com/yonicalsin/nextjs-cors#readme",
+   "bugs": {
+      "url": "https://github.com/yonicalsin/nextjs-cors/issues"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/yonicalsin/nextjs-cors.git"
+   },
    "license": "MIT",
    "author": "Yoni Calsin <helloyonicb@gmail.com>",
    "main": "index.js",
