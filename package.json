@@ -20,6 +20,9 @@
    "author": "Yoni Calsin <helloyonicb@gmail.com>",
    "main": "index.js",
    "scripts": {
+      "build": "tsc",
+      "clean": "rimraf index.js",
+      "dev": "nodemon",
       "format": "prettier --write ./**/*.{ts,json}"
    },
    "dependencies": {
