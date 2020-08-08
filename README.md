@@ -30,6 +30,28 @@ yarn add --save nextjs-cors
 
 ## 🌎 Usage
 
+nextjs-cors uses the cors package, so we invite you to check the documentation https://www.npmjs.com/package/cors
+
+> pages/api/whoami.js
+
+```js
+import NextCors from 'nextjs-cors';
+
+async function handler(req, res) {
+   // Run the cors middleware
+   // nextjs-cors uses the cors package, so we invite you to check the documentation https://www.npmjs.com/package/cors
+   await NextCors(req, res, {
+      // Options
+      methods: ['GET'],
+      origin: 'http://example.com',
+      optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+   });
+
+   // Rest of the API logic
+   res.json({ message: 'Hello Everyone!' });
+}
+```
+
 ## ⭐ Support for
 
 `nextjs-cors` is an open source project licensed by [MIT](LICENSE). You can grow thanks to the sponsors and the support of the amazing sponsors. If you want to join them, [contact me here](mailto:helloyonicb@gmail.com).
