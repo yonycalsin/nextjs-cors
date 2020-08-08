@@ -1,21 +1,21 @@
 {
-  "name": "nextjs-cors",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/yonicalsin/nextjs-cors.git",
-  "author": "Yoni Calsin <helloyonicb@gmail.com>",
-  "license": "MIT",
-  "private": false,
-  "devDependencies": {
-    "prettier": "^2.0.5",
-    "prettier-plugin-organize-imports": "^1.1.1",
-    "prettier-plugin-packagejson": "^2.2.5",
-    "typescript": "^3.9.7"
-  },
-  "dependencies": {
-    "cors": "^2.8.5"
-  },
-  "scripts": {
-     "format": "prettier --write ./**/*.{ts,json}"
-  }
+   "name": "nextjs-cors",
+   "version": "1.0.0",
+   "private": false,
+   "repository": "https://github.com/yonicalsin/nextjs-cors.git",
+   "license": "MIT",
+   "author": "Yoni Calsin <helloyonicb@gmail.com>",
+   "main": "index.js",
+   "scripts": {
+      "format": "prettier --write ./**/*.{ts,json}"
+   },
+   "dependencies": {
+      "cors": "^2.8.5"
+   },
+   "devDependencies": {
+      "prettier": "^2.0.5",
+      "prettier-plugin-organize-imports": "^1.1.1",
+      "prettier-plugin-packagejson": "^2.2.5",
+      "typescript": "^3.9.7"
+   }
 }

@@ -1,5 +1,5 @@
 {
-    "editor.formatOnSave": true,
-    "editor.tabSize": 3,
-    "editor.detectIndentation": false
+   "editor.formatOnSave": true,
+   "editor.tabSize": 3,
+   "editor.detectIndentation": false
 }
