@@ -60,9 +60,6 @@ async function handler(req, res) {
 
 -  Github [@yonycalsin](https://github.com/yonycalsin)
 -  Twitter [@yonycalsin](https://twitter.com/yonycalsin)
--  Instagram [@yony_calsin](https://instagram.com/yony_calsin)
--  Medium [@yonycalsin](https://medium.com/@yonycalsin)
--  dev [@yonycalsin](https://dev.to/yonycalsin)
 
 ## 🚀 Contributors
 
