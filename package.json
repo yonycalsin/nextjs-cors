@@ -28,7 +28,8 @@
       "clean": "rimraf .dist",
       "dev": "nodemon",
       "format": "prettier --write ./**/*.{ts,json}",
-      "typecheck": "tsc --noEmit"
+      "typecheck": "tsc --noEmit",
+      "fetch": "sh ./scripts/git-fetch.sh"
    },
    "husky": {
       "hooks": {
