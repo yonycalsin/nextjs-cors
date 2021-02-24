@@ -46,6 +46,6 @@
       "typescript": "^3.9.7"
    },
    "peerDependencies": {
-      "next": "^10.0.7"
+      "next": "^8.1.1-canary.54 || ^9.0.0 || ^10.0.0"
    }
 }
