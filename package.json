@@ -38,8 +38,5 @@
       "rimraf": "^3.0.2",
       "ts-node": "^8.10.2",
       "typescript": "^3.9.7"
-   },
-   "peerDependencies": {
-      "next": "^10.0.7"
    }
 }
