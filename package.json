@@ -1,6 +1,6 @@
 {
    "name": "nextjs-cors",
-   "version": "1.0.2@beta",
+   "version": "1.0.2-alpha",
    "private": false,
    "description": "nextjs-cors is a node.js package to provide a Connect/Express middleware that can be used to enable CORS with various options.",
    "keywords": [
@@ -28,7 +28,8 @@
       "clean": "rimraf .dist",
       "dev": "nodemon",
       "format": "prettier --write ./**/*.{ts,json}",
-      "typecheck": "tsc --noEmit"
+      "typecheck": "tsc --noEmit",
+      "fetch": "sh ./scripts/git-fetch.sh"
    },
    "husky": {
       "hooks": {
