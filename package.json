@@ -1,25 +1,28 @@
 {
    "name": "nextjs-cors",
-   "version": "1.0.1",
+   "version": "1.0.2",
    "private": false,
    "description": "nextjs-cors is a node.js package to provide a Connect/Express middleware that can be used to enable CORS with various options.",
    "keywords": [
       "nextjs-cors",
       "express-cors",
-      "nextjs-express-cors"
+      "nextjs-express-cors",
+      "next-cors",
+      "cors-server",
+      "cors"
    ],
-   "homepage": "https://github.com/yonicalsin/nextjs-cors#readme",
+   "homepage": "https://github.com/yonycalsin/nextjs-cors#readme",
    "bugs": {
-      "url": "https://github.com/yonicalsin/nextjs-cors/issues"
+      "url": "https://github.com/yonycalsin/nextjs-cors/issues"
    },
    "repository": {
       "type": "git",
-      "url": "git+https://github.com/yonicalsin/nextjs-cors.git"
+      "url": "git+https://github.com/yonycalsin/nextjs-cors.git"
    },
    "license": "MIT",
-   "author": "Yoni Calsin <helloyonicb@gmail.com>",
-   "main": "index.js",
-   "types": "index.d.ts",
+   "author": "Yony Calsin",
+   "main": ".dist/index.js",
+   "types": ".dist/index.d.ts",
    "scripts": {
       "build": "tsc",
       "clean": "rimraf index.js",
@@ -31,6 +34,9 @@
    },
    "devDependencies": {
       "@types/cors": "^2.8.7",
+      "@types/react": "^17.0.2",
+      "@types/react-dom": "^17.0.1",
+      "next": "^10.0.7",
       "nodemon": "^2.0.4",
       "prettier": "^2.0.5",
       "prettier-plugin-organize-imports": "^1.1.1",
@@ -40,6 +46,6 @@
       "typescript": "^3.9.7"
    },
    "peerDependencies": {
-      "next": "^10.0.7"
+      "next": "^8.1.1-canary.54 || ^9.0.0 || ^10.0.0"
    }
 }

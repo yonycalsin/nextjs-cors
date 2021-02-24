@@ -7,8 +7,8 @@
       "experimentalDecorators": true,
       "target": "es5",
       "sourceMap": false,
-      "outDir": "./",
-      "baseUrl": "./",
+      "outDir": ".dist",
+      "baseUrl": "src",
       "incremental": false,
       "esModuleInterop": true
    },
