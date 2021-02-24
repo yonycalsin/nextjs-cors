@@ -1,15 +1,17 @@
 import cors, { CorsOptions, CorsOptionsDelegate } from 'cors';
-
-interface More {
-   [key: string]: any;
-}
+import { NextApiRequest, NextApiResponse } from 'next';
+import express = require('express');
 
 // Helper method to wait for a middleware to execute before continuing
 // And to throw an error when an error happens in a middleware
 function initMiddleware(middleware) {
-   return (req: More, res: More, options?: CorsOptions | CorsOptionsDelegate) =>
+   return (
+      req: NextApiRequest,
+      res: NextApiResponse,
+      options?: CorsOptions | CorsOptionsDelegate,
+   ) =>
       new Promise((resolve, reject) => {
-         middleware(options)(req, res, (result) => {
+         middleware(options)(req, res, (result: express.RequestHandler) => {
             if (result instanceof Error) {
                return reject(result);
             }
