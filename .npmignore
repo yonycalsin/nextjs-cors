@@ -1,15 +1,14 @@
 # Folders
-/.vscode
-.vscode
-/node_modules
-node_modules
+.github/
+.vscode/
+node_modules/
+
+src/
 
 # Files
 .gitignore
-.npmrc
+.npmignore
 .prettierignore
 .prettierrc
-index.ts
 nodemon.json
 tsconfig.json
-yarn.lock
