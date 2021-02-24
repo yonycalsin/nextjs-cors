@@ -32,7 +32,7 @@ yarn add --save nextjs-cors
 
 nextjs-cors uses the cors package, so we invite you to check the documentation https://www.npmjs.com/package/cors
 
-> pages/api/whoami.js
+> pages/api/whoami.{ts,js}
 
 ```js
 import NextCors from 'nextjs-cors';
