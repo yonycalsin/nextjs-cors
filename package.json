@@ -6,20 +6,23 @@
    "keywords": [
       "nextjs-cors",
       "express-cors",
-      "nextjs-express-cors"
+      "nextjs-express-cors",
+      "next-cors",
+      "cors-server",
+      "cors"
    ],
-   "homepage": "https://github.com/yonicalsin/nextjs-cors#readme",
+   "homepage": "https://github.com/yonycalsin/nextjs-cors#readme",
    "bugs": {
-      "url": "https://github.com/yonicalsin/nextjs-cors/issues"
+      "url": "https://github.com/yonycalsin/nextjs-cors/issues"
    },
    "repository": {
       "type": "git",
-      "url": "git+https://github.com/yonicalsin/nextjs-cors.git"
+      "url": "git+https://github.com/yonycalsin/nextjs-cors.git"
    },
    "license": "MIT",
-   "author": "Yoni Calsin <helloyonicb@gmail.com>",
-   "main": "index.js",
-   "types": "index.d.ts",
+   "author": "Yony Calsin",
+   "main": ".dist/index.js",
+   "types": ".dist/index.d.ts",
    "scripts": {
       "build": "tsc",
       "clean": "rimraf index.js",
