@@ -3,7 +3,7 @@ name: CI Workflow
 on: push
 
 jobs:
-   eslint:
+   typecheck:
       if: "! contains(toJSON(github.event.commits.*.message), '[skip ci]')"
 
       runs-on: ubuntu-latest
