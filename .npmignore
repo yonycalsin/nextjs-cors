@@ -2,11 +2,13 @@
 .github/
 .vscode/
 node_modules/
+scripts/
 
 src/
 
 # Files
 .gitignore
+.gitmodules
 .npmignore
 .prettierignore
 .prettierrc
