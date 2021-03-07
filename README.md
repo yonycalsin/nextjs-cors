@@ -25,7 +25,7 @@
 npm install --save nextjs-cors
 
 # Using yarn
-yarn add --save nextjs-cors
+yarn add nextjs-cors
 ```
 
 ## 🌎 Usage
@@ -43,7 +43,7 @@ async function handler(req, res) {
    await NextCors(req, res, {
       // Options
       methods: ['GET'],
-      origin: 'http://example.com',
+      origin: '*',
       optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
    });
 
