@@ -1,8 +1,5 @@
 import cors, { CorsOptions, CorsOptionsDelegate } from 'cors';
-import type {
-   NextApiRequest,
-   NextApiResponse,
-} from 'next/dist/next-server/lib/utils';
+import { NextApiRequest, NextApiResponse } from 'next';
 
 // Helper method to wait for a middleware to execute before continuing
 // And to throw an error when an error happens in a middleware
