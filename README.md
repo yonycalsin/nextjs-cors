@@ -22,10 +22,10 @@
 
 ```bash
 # Using npm
-npm install --save nextjs-cors
+npm install --save nextjs-cors@latest
 
 # Using yarn
-yarn add nextjs-cors
+yarn add nextjs-cors@latest
 ```
 
 ## 🌎 Usage
