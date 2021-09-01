@@ -1,6 +1,6 @@
 {
    "name": "nextjs-cors",
-   "version": "1.0.7",
+   "version": "0.0.0-development",
    "private": false,
    "description": "nextjs-cors is a node.js package to provide a Connect/Express middleware that can be used to enable CORS with various options.",
    "keywords": [
@@ -21,20 +21,29 @@
    },
    "license": "MIT",
    "author": "Yony Calsin",
-   "main": ".dist/index.js",
-   "types": ".dist/index.d.ts",
+   "main": "dist/index.js",
+   "module": "dist/nextjs-cors.esm.js",
+   "typings": "dist/index.d.ts",
    "files": [
-      ".dist"
+      "dist"
    ],
    "scripts": {
-      "build": "tsc",
       "clean": "rimraf .dist",
-      "dev": "nodemon",
-      "format": "prettier --write ./**/*.{ts,json}",
-      "typecheck": "tsc --noEmit"
+      "typecheck": "tsc --noEmit",
+      "start": "tsdx watch",
+      "build": "tsdx build",
+      "test": "tsdx test",
+      "lint": "tsdx lint",
+      "prepare": "tsdx build",
+      "size": "size-limit",
+      "analyze": "size-limit --why",
+      "prettier": "prettier --ignore-path .gitignore \"**/*.{ts,tsx,json}\"",
+      "format": "npm run prettier -- --write",
+      "check-format": "npm run prettier -- --list-different"
    },
    "husky": {
       "hooks": {
+         "pre-commit": "tsdx lint",
          "pre-push": "npm run typecheck"
       }
    },
@@ -47,6 +56,7 @@
       "cors": "^2.8.5"
    },
    "devDependencies": {
+      "@size-limit/preset-small-lib": "^5.0.3",
       "@types/cors": "^2.8.12",
       "@types/react": "^17.0.18",
       "@types/react-dom": "^17.0.9",
@@ -60,13 +70,26 @@
       "react": "^17.0.2",
       "react-dom": "^17.0.2",
       "rimraf": "^3.0.2",
+      "size-limit": "^5.0.3",
       "ts-node": "^10.2.1",
-      "typescript": "^4.3.5"
+      "tsdx": "^0.14.1",
+      "tslib": "^2.3.1",
+      "typescript": "^4.4.2"
    },
    "peerDependencies": {
       "next": "^8.1.1-canary.54 || ^9.0.0 || ^10.0.0 || ^11.0.0"
    },
    "publishConfig": {
       "access": "public"
-   }
+   },
+   "size-limit": [
+      {
+         "path": "dist/nextjs-cors.cjs.production.min.js",
+         "limit": "300 B"
+      },
+      {
+         "path": "dist/nextjs-cors.esm.js",
+         "limit": "350 B"
+      }
+   ]
 }
