@@ -1,5 +1,9 @@
 {
-   "editor.formatOnSave": true,
-   "editor.tabSize": 3,
-   "editor.detectIndentation": false
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.formatOnSave": true,
+  "editor.rulers": [120],
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "editor.detectIndentation": false
 }

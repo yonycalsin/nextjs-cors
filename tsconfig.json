@@ -1,16 +1,16 @@
 {
-   "include": ["src", "types"],
-   "compilerOptions": {
-      "module": "esnext",
-      "lib": ["dom", "esnext"],
-      "importHelpers": true,
-      "declaration": true,
-      "sourceMap": true,
-      "rootDir": "./src",
-      "strict": true,
-      "moduleResolution": "node",
-      "esModuleInterop": true,
-      "skipLibCheck": true,
-      "noEmit": true
-   }
+  "include": ["src", "types"],
+  "compilerOptions": {
+    "module": "esnext",
+    "lib": ["dom", "esnext"],
+    "importHelpers": true,
+    "declaration": true,
+    "sourceMap": true,
+    "rootDir": "./src",
+    "strict": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "noEmit": true
+  }
 }

@@ -1,6 +1,8 @@
 {
-   "trailingComma": "all",
+   "semi": false,
    "singleQuote": true,
-   "semi": true,
-   "tabWidth": 3
-}
+   "trailingComma": "all",
+   "arrowParens": "avoid",
+   "printWidth": 120
+ }
+ 

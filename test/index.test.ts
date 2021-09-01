@@ -1,5 +1,5 @@
 describe('testing', () => {
-   it('testing', async () => {
-      expect(5).toBe(5);
-   });
-});
+  it('testing', async () => {
+    expect(5).toBe(5)
+  })
+})
