@@ -28,7 +28,8 @@
     "dist"
   ],
   "scripts": {
-    "clean": "rimraf .dist",
+    "clean": "rimraf dist",
+    "boot": "npm run clean && npm run build",
     "typecheck": "tsc --noEmit",
     "start": "tsdx watch",
     "build": "tsdx build",
@@ -85,11 +86,19 @@
   "size-limit": [
     {
       "path": "dist/nextjs-cors.cjs.production.min.js",
-      "limit": "300 B"
+      "limit": "300 B",
+      "ignore": [
+        "cors",
+        "next"
+      ]
     },
     {
       "path": "dist/nextjs-cors.esm.js",
-      "limit": "350 B"
+      "limit": "350 B",
+      "ignore": [
+        "cors",
+        "next"
+      ]
     }
   ]
 }
