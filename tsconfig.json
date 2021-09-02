@@ -1,16 +1,16 @@
 {
-   "compilerOptions": {
-      "module": "commonjs",
-      "declaration": true,
-      "removeComments": true,
-      "emitDecoratorMetadata": true,
-      "experimentalDecorators": true,
-      "target": "es5",
-      "sourceMap": false,
-      "outDir": ".dist",
-      "baseUrl": "src",
-      "incremental": false,
-      "esModuleInterop": true
-   },
-   "exclude": ["node_modules", "dist"]
+  "include": ["src", "types"],
+  "compilerOptions": {
+    "module": "esnext",
+    "lib": ["dom", "esnext"],
+    "importHelpers": true,
+    "declaration": true,
+    "sourceMap": true,
+    "rootDir": "./src",
+    "strict": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "noEmit": true
+  }
 }

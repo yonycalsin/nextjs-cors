@@ -1,72 +1,97 @@
 {
-   "name": "nextjs-cors",
-   "version": "1.0.7",
-   "private": false,
-   "description": "nextjs-cors is a node.js package to provide a Connect/Express middleware that can be used to enable CORS with various options.",
-   "keywords": [
-      "nextjs-cors",
-      "express-cors",
-      "nextjs-express-cors",
-      "next-cors",
-      "cors-server",
-      "cors"
-   ],
-   "homepage": "https://github.com/yonycalsin/nextjs-cors#readme",
-   "bugs": {
-      "url": "https://github.com/yonycalsin/nextjs-cors/issues"
-   },
-   "repository": {
-      "type": "git",
-      "url": "git+https://github.com/yonycalsin/nextjs-cors.git"
-   },
-   "license": "MIT",
-   "author": "Yony Calsin",
-   "main": ".dist/index.js",
-   "types": ".dist/index.d.ts",
-   "files": [
-      ".dist"
-   ],
-   "scripts": {
-      "build": "tsc",
-      "clean": "rimraf .dist",
-      "dev": "nodemon",
-      "format": "prettier --write ./**/*.{ts,json}",
-      "typecheck": "tsc --noEmit"
-   },
-   "husky": {
-      "hooks": {
-         "pre-push": "npm run typecheck"
-      }
-   },
-   "lint-staged": {
-      "*.{ts,js}": [
-         "eslint --fix"
+  "name": "nextjs-cors",
+  "version": "0.0.0-development",
+  "private": false,
+  "description": "nextjs-cors is a node.js package to provide a Connect/Express middleware that can be used to enable CORS with various options.",
+  "keywords": [
+    "nextjs-cors",
+    "express-cors",
+    "nextjs-express-cors",
+    "next-cors",
+    "cors-server",
+    "cors"
+  ],
+  "homepage": "https://github.com/yonycalsin/nextjs-cors#readme",
+  "bugs": {
+    "url": "https://github.com/yonycalsin/nextjs-cors/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yonycalsin/nextjs-cors.git"
+  },
+  "license": "MIT",
+  "author": "Yony Calsin",
+  "main": "dist/index.js",
+  "module": "dist/nextjs-cors.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rimraf dist",
+    "boot": "npm run clean && npm run build",
+    "typecheck": "tsc --noEmit",
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why",
+    "prettier": "prettier --ignore-path .gitignore \"**/*.{ts,tsx,json,md}\"",
+    "format": "npm run prettier -- --write",
+    "check-format": "npm run prettier -- --list-different"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint",
+      "pre-push": "npm run typecheck"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,js}": [
+      "eslint --fix"
+    ]
+  },
+  "dependencies": {
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "@size-limit/preset-big-lib": "^5.0.3",
+    "@types/cors": "^2.8.12",
+    "husky": "^6.0.0",
+    "lint-staged": "^10.5.4",
+    "next": "^11.1.0",
+    "prettier": "^2.0.5",
+    "prettier-plugin-organize-imports": "^2.0.0",
+    "prettier-plugin-packagejson": "^2.2.5",
+    "rimraf": "^3.0.2",
+    "size-limit": "^5.0.3",
+    "tsdx": "^0.14.1",
+    "typescript": "^4.4.2"
+  },
+  "peerDependencies": {
+    "next": "^8.1.1-canary.54 || ^9.0.0 || ^10.0.0 || ^11.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "size-limit": [
+    {
+      "path": "dist/nextjs-cors.cjs.production.min.js",
+      "limit": "300 B",
+      "ignore": [
+        "cors",
+        "next"
       ]
-   },
-   "dependencies": {
-      "cors": "^2.8.5"
-   },
-   "devDependencies": {
-      "@types/cors": "^2.8.12",
-      "@types/react": "^17.0.18",
-      "@types/react-dom": "^17.0.9",
-      "husky": "^6.0.0",
-      "lint-staged": "^10.5.4",
-      "next": "^11.1.0",
-      "nodemon": "^2.0.4",
-      "prettier": "^2.0.5",
-      "prettier-plugin-organize-imports": "^2.0.0",
-      "prettier-plugin-packagejson": "^2.2.5",
-      "react": "^17.0.2",
-      "react-dom": "^17.0.2",
-      "rimraf": "^3.0.2",
-      "ts-node": "^10.2.1",
-      "typescript": "^4.3.5"
-   },
-   "peerDependencies": {
-      "next": "^8.1.1-canary.54 || ^9.0.0 || ^10.0.0 || ^11.0.0"
-   },
-   "publishConfig": {
-      "access": "public"
-   }
+    },
+    {
+      "path": "dist/nextjs-cors.esm.js",
+      "limit": "350 B",
+      "ignore": [
+        "cors",
+        "next"
+      ]
+    }
+  ]
 }

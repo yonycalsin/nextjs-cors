@@ -58,8 +58,8 @@ async function handler(req, res) {
 
 ## 🎩 Stay in touch
 
--  Github [@yonycalsin](https://github.com/yonycalsin)
--  Twitter [@yonycalsin](https://twitter.com/yonycalsin)
+- Github [@yonycalsin](https://github.com/yonycalsin)
+- Twitter [@yonycalsin](https://twitter.com/yonycalsin)
 
 ## 🚀 Contributors
 
