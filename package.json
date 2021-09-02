@@ -57,7 +57,7 @@
     "cors": "^2.8.5"
   },
   "devDependencies": {
-    "@size-limit/preset-small-lib": "^5.0.3",
+    "@size-limit/preset-big-lib": "^5.0.3",
     "@types/cors": "^2.8.12",
     "husky": "^6.0.0",
     "lint-staged": "^10.5.4",
