@@ -36,8 +36,6 @@
     "test": "tsdx test",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
-    "size": "size-limit",
-    "analyze": "size-limit --why",
     "prettier": "prettier --ignore-path .gitignore \"**/*.{ts,tsx,json,md}\"",
     "format": "npm run prettier -- --write",
     "check-format": "npm run prettier -- --list-different"
@@ -57,7 +55,6 @@
     "cors": "^2.8.5"
   },
   "devDependencies": {
-    "@size-limit/preset-big-lib": "^5.0.3",
     "@types/cors": "^2.8.12",
     "husky": "^6.0.0",
     "lint-staged": "^10.5.4",
@@ -66,7 +63,6 @@
     "prettier-plugin-organize-imports": "^2.0.0",
     "prettier-plugin-packagejson": "^2.2.5",
     "rimraf": "^3.0.2",
-    "size-limit": "^5.0.3",
     "tsdx": "^0.14.1",
     "typescript": "^4.4.2"
   },
@@ -75,23 +71,5 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "size-limit": [
-    {
-      "path": "dist/nextjs-cors.cjs.production.min.js",
-      "limit": "300 B",
-      "ignore": [
-        "cors",
-        "next"
-      ]
-    },
-    {
-      "path": "dist/nextjs-cors.esm.js",
-      "limit": "350 B",
-      "ignore": [
-        "cors",
-        "next"
-      ]
-    }
-  ]
+  }
 }
