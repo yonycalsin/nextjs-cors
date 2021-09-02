@@ -2,6 +2,7 @@
 
 `Nextjs-Cors` is a function that allows you to enter an object, by means of points, and very easily, and is compatible with **typescript**
 
+[![CI](https://github.com/yonycalsin/nextjs-cors/actions/workflows/ci.yml/badge.svg)](https://github.com/yonycalsin/nextjs-cors/actions/workflows/ci.yml)
 <a href="https://github.com/yonycalsin/nextjs-cors"><img src="https://img.shields.io/spiget/stars/1000?color=brightgreen&label=Star&logo=github" /></a>
 <a href="https://www.npmjs.com/nextjs-cors" target="_blank">
 <img src="https://img.shields.io/npm/v/nextjs-cors" alt="NPM Version" /></a>
