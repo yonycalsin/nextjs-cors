@@ -3,6 +3,8 @@ on: [pull_request]
 jobs:
   size:
     runs-on: ubuntu-latest
+    env:
+      CI_JOB_NUMBER: 1
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
