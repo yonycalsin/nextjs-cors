@@ -1,8 +1,8 @@
 import cors, { CorsOptions, CorsOptionsDelegate } from 'cors'
 import { NextApiRequest, NextApiResponse } from 'next'
 
-// Helper method to wait for a middleware to execute before continuing
-// And to throw an error when an error happens in a middleware
+// - Helper method to wait for a middleware to execute before continuing
+// - And to throw an error when an error happens in a middleware
 function initMiddleware(middleware: typeof cors) {
   return (req: NextApiRequest, res: NextApiResponse, options?: CorsOptions | CorsOptionsDelegate) =>
     new Promise((resolve, reject) => {
@@ -16,7 +16,7 @@ function initMiddleware(middleware: typeof cors) {
     })
 }
 
-// You can read more about the available options here: https://github.com/expressjs/cors#configuration-options
+// - You can read more about the available options here: https://github.com/expressjs/cors#configuration-options
 const NextCors = initMiddleware(cors)
 
 export default NextCors
