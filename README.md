@@ -1,6 +1,6 @@
 # Nextjs Cors
 
-`Nextjs-Cors` is a function that allows you to enter an object, by means of points, and very easily, and is compatible with **typescript**
+`Nextjs-Cors` is a node.js package to provide a middleware that can be used to enable CORS with various options in nextjs applications.
 
 [![CI](https://github.com/yonycalsin/nextjs-cors/actions/workflows/ci.yml/badge.svg)](https://github.com/yonycalsin/nextjs-cors/actions/workflows/ci.yml)
 <a href="https://github.com/yonycalsin/nextjs-cors"><img src="https://img.shields.io/spiget/stars/1000?color=brightgreen&label=Star&logo=github" /></a>
