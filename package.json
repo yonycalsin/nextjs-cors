@@ -38,7 +38,8 @@
     "prepare": "tsdx build",
     "prettier": "prettier --ignore-path .gitignore \"**/*.{ts,tsx,json,md}\"",
     "format": "npm run prettier -- --write",
-    "check-format": "npm run prettier -- --list-different"
+    "check-format": "npm run prettier -- --list-different",
+    "semantic-release": "semantic-release"
   },
   "husky": {
     "hooks": {
@@ -63,6 +64,7 @@
     "prettier-plugin-organize-imports": "^2.0.0",
     "prettier-plugin-packagejson": "^2.2.5",
     "rimraf": "^3.0.2",
+    "semantic-release": "^18.0.0",
     "tsdx": "^0.14.1",
     "typescript": "^4.4.2"
   },
