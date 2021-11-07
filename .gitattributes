@@ -1,4 +1,4 @@
-# In Windows this edition appends crlf 😖, so this
-# configuration will enforce lf for that little issue.
+# In Windows this edition appends crlf, so this
+# configuration will enforce lf.
 
 * text eol=lf
