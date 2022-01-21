@@ -15,7 +15,7 @@
 <a href="https://twitter.com/yonycalsin" target="_blank">
 <img src="https://img.shields.io/twitter/follow/yonycalsin.svg?style=social&label=Follow"></a>
 
-## 🍉 Installation
+## Installation
 
 > First we will have to install, in order to use this wonderful package.
 
@@ -27,7 +27,7 @@ npm install --save nextjs-cors@latest
 yarn add nextjs-cors@latest
 ```
 
-## 🌎 Usage
+## Usage
 
 nextjs-cors uses the cors package, so we invite you to check the documentation https://github.com/expressjs/cors
 
@@ -51,19 +51,19 @@ async function handler(req, res) {
 }
 ```
 
-## ⭐ Support for
+## Support for
 
 `nextjs-cors` is an open source project licensed by [MIT](LICENSE). You can grow thanks to the sponsors and the support of the amazing sponsors. If you want to join them, [contact me here](https://twitter.com/yonycalsin).
 
-## 🎩 Stay in touch
+## Stay in touch
 
 - Github [@yonycalsin](https://github.com/yonycalsin)
 - Twitter [@yonycalsin](https://twitter.com/yonycalsin)
 
-## 🚀 Contributors
+## Contributors
 
 Thanks to the wonderful people who collaborate with me !
 
-## 📜 License
+## License
 
-`nextjs-cors` under [License MIT.](LICENSE)
+`nextjs-cors` under [License.](LICENSE)
