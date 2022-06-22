@@ -25,6 +25,9 @@ npm install --save nextjs-cors@latest
 
 # Using yarn
 yarn add nextjs-cors@latest
+
+# Using pnpm
+pnpm add nextjs-cors@latest
 ```
 
 ## Usage
