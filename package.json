@@ -28,23 +28,23 @@
     "dist"
   ],
   "scripts": {
-    "clean": "rimraf dist",
-    "boot": "npm run clean && npm run build",
-    "typecheck": "tsc --noEmit",
-    "start": "tsdx watch",
+    "boot": "pnpm run clean && pnpm run build",
     "build": "tsdx build",
-    "test": "tsdx test",
+    "check-format": "pnpm run prettier -- --list-different",
+    "clean": "rimraf dist",
+    "format": "pnpm run prettier -- --write",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "prettier": "prettier --ignore-path .gitignore \"**/*.{ts,tsx,json,md}\"",
-    "format": "npm run prettier -- --write",
-    "check-format": "npm run prettier -- --list-different",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "start": "tsdx watch",
+    "test": "tsdx test",
+    "typecheck": "tsc --noEmit"
   },
   "husky": {
     "hooks": {
       "pre-commit": "tsdx lint",
-      "pre-push": "npm run typecheck"
+      "pre-push": "pnpm run typecheck"
     }
   },
   "lint-staged": {
@@ -53,28 +53,29 @@
     ]
   },
   "dependencies": {
-    "cors": "^2.8.5"
+    "@types/cors": "2.8.12",
+    "cors": "2.8.5"
   },
   "devDependencies": {
-    "@types/cors": "^2.8.12",
-    "husky": "^6.0.0",
-    "lint-staged": "^10.5.4",
-    "next": "^11.1.0",
-    "prettier": "^2.0.5",
-    "prettier-plugin-organize-imports": "^2.0.0",
-    "prettier-plugin-packagejson": "^2.2.5",
-    "rimraf": "^3.0.2",
-    "semantic-release": "^18.0.0",
-    "tsdx": "^0.14.1",
-    "typescript": "^4.4.2"
+    "husky": "6.0.0",
+    "lint-staged": "10.5.4",
+    "next": "11.1.0",
+    "prettier": "2.0.5",
+    "prettier-plugin-organize-imports": "2.0.0",
+    "prettier-plugin-packagejson": "2.2.5",
+    "rimraf": "3.0.2",
+    "semantic-release": "18.0.0",
+    "tsdx": "0.14.1",
+    "typescript": "4.4.2"
   },
   "peerDependencies": {
     "next": "^8.1.1-canary.54 || ^9.0.0 || ^10.0.0-0 || ^11.0.0 || ^12.0.0 || ^13.0.0"
   },
-  "publishConfig": {
-    "access": "public"
-  },
+  "packageManager": "pnpm@7.14.2",
   "volta": {
     "node": "14.17.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
