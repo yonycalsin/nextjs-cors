@@ -25,7 +25,9 @@
   "module": "dist/nextjs-cors.esm.js",
   "typings": "dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "package.json",
+    "README.md"
   ],
   "scripts": {
     "clean": "rimraf dist",
@@ -56,6 +58,8 @@
     "cors": "^2.8.5"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/git": "^10.0.1",
     "@types/cors": "^2.8.12",
     "husky": "^6.0.0",
     "lint-staged": "^10.5.4",
@@ -64,7 +68,7 @@
     "prettier-plugin-organize-imports": "^2.0.0",
     "prettier-plugin-packagejson": "^2.2.5",
     "rimraf": "^3.0.2",
-    "semantic-release": "^18.0.0",
+    "semantic-release": "^19.0.5",
     "tsdx": "^0.14.1",
     "typescript": "^4.4.2"
   },
@@ -73,6 +77,27 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "release": {
+    "branches": [
+      "master"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/npm",
+      [
+        "@semantic-release/github",
+        {
+          "assets": [
+            "dist/**",
+            "package.json",
+            "README.md"
+          ]
+        }
+      ],
+      "@semantic-release/changelog"
+    ]
   },
   "volta": {
     "node": "14.17.0"
