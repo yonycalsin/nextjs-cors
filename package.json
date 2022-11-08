@@ -90,9 +90,7 @@
         "@semantic-release/github",
         {
           "assets": [
-            "dist/**",
-            "package.json",
-            "README.md"
+            "dist"
           ]
         }
       ],
