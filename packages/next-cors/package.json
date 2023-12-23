@@ -8,7 +8,8 @@
     "nextjs-express-cors",
     "next-cors",
     "cors-server",
-    "cors"
+    "cors",
+    "nextjs-cors"
   ],
   "homepage": "https://github.com/yonycalsin/nextjs-cors#readme",
   "bugs": {
