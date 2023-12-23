@@ -31,7 +31,7 @@
   ],
   "scripts": {
     "clean": "rimraf dist",
-    "boot": "npm run clean && npm run build",
+    "boot": "pnpm run clean && pnpm run build",
     "typecheck": "tsc --noEmit",
     "start": "tsdx watch",
     "build": "tsdx build",
@@ -39,14 +39,14 @@
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "prettier": "prettier --ignore-path .gitignore \"**/*.{ts,tsx,json,md}\"",
-    "format": "npm run prettier -- --write",
-    "check-format": "npm run prettier -- --list-different",
+    "format": "pnpm run prettier --write",
+    "check-format": "pnpm run prettier --list-different",
     "semantic-release": "semantic-release"
   },
   "husky": {
     "hooks": {
       "pre-commit": "tsdx lint",
-      "pre-push": "npm run typecheck"
+      "pre-push": "pnpm run typecheck"
     }
   },
   "lint-staged": {
@@ -58,19 +58,19 @@
     "cors": "^2.8.5"
   },
   "devDependencies": {
-    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
-    "@types/cors": "^2.8.12",
-    "husky": "^6.0.0",
-    "lint-staged": "^10.5.4",
-    "next": "^11.1.0",
-    "prettier": "^2.0.5",
-    "prettier-plugin-organize-imports": "^2.0.0",
-    "prettier-plugin-packagejson": "^2.2.5",
-    "rimraf": "^3.0.2",
+    "@types/cors": "^2.8.17",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "next": "^14.0.4",
+    "prettier": "^3.1.1",
+    "prettier-plugin-organize-imports": "^3.2.4",
+    "prettier-plugin-packagejson": "^2.4.7",
+    "rimraf": "^5.0.5",
     "semantic-release": "^19.0.5",
     "tsdx": "^0.14.1",
-    "typescript": "^4.4.2"
+    "typescript": "^5.3.3"
   },
   "peerDependencies": {
     "next": "^8.1.1-canary.54 || ^9.0.0 || ^10.0.0-0 || ^11.0.0 || ^12.0.0 || ^13.0.0 || ^14.0.0"
@@ -97,7 +97,8 @@
       "@semantic-release/changelog"
     ]
   },
+  "packageManager": "pnpm@8.11.0",
   "volta": {
-    "node": "14.17.0"
+    "node": "20.10.0"
   }
 }

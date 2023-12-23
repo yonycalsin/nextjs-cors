@@ -1,5 +1,9 @@
 import cors, { CorsOptions, CorsOptionsDelegate } from 'cors'
-import { NextApiRequest, NextApiResponse } from 'next'
+// import type { NextApiRequest, NextApiResponse } from 'next'
+
+type NextApiRequest = any
+
+type NextApiResponse = any
 
 // Helper method to wait for a middleware to execute before continuing
 // And to throw an error when an error happens in a middleware
