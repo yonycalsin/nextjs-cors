@@ -14,7 +14,7 @@ jobs:
       matrix:
         node: ['16.x', '18.x', '20.x']
         os: [ubuntu-latest, windows-latest, macOS-latest]
-        pnpm: ['8.11.0']
+        pnpm: ['8.12.1']
 
     steps:
       - name: Checkout Repo
