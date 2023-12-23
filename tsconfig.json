@@ -1,16 +1,4 @@
 {
-  "include": ["src", "types"],
-  "compilerOptions": {
-    "module": "esnext",
-    "lib": ["dom", "esnext"],
-    "importHelpers": true,
-    "declaration": true,
-    "sourceMap": true,
-    "rootDir": "./src",
-    "strict": false,
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "noEmit": true
-  }
+  "extends": "@tsconfig/node20/tsconfig.json",
+  "include": ["src", "test"]
 }
