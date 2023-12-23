@@ -1,0 +1,33 @@
+{
+  "name": "@next-cors/next-connect",
+  "version": "1.0.0",
+  "description": "next-cors for next-connect",
+  "license": "MIT",
+  "author": "Yony Calsin",
+  "keywords": [],
+  "main": "./dist/main.js",
+  "module": "./dist/main.mjs",
+  "types": "./dist/main.d.ts",
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "build": "tsup src/main.ts --format esm,cjs --dts",
+    "dev": "tsup src/main.ts --format esm,cjs --watch --dts",
+    "clean": "rimraf -rf .turbo dist"
+  },
+  "devDependencies": {
+    "@next-cors/tsconfig": "workspace:*",
+    "@types/node": "18.11.9",
+    "next-connect": "0.13.0",
+    "rimraf": "3.0.2",
+    "tsup": "6.4.0",
+    "typescript": "4.4.2"
+  },
+  "peerDependencies": {
+    "next-connect": "0.13.0"
+  },
+  "dependencies": {
+    "@next-cors/core": "workspace:*"
+  }
+}

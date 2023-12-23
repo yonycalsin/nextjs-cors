@@ -1,7 +1,7 @@
 {
   "name": "nextjs-cors",
   "version": "0.0.0",
-  "private": false,
+  "private": true,
   "description": "Nextjs-Cors is a node.js package to provide a middleware that can be used to enable CORS with various options in nextjs applications.",
   "keywords": [
     "nextjs-cors",
@@ -21,25 +21,18 @@
   },
   "license": "MIT",
   "author": "Yony Calsin",
-  "main": "dist/index.js",
-  "module": "dist/nextjs-cors.esm.js",
-  "typings": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
   "scripts": {
-    "boot": "pnpm run clean && pnpm run build",
-    "build": "tsdx build",
-    "check-format": "pnpm run prettier -- --list-different",
-    "clean": "rimraf dist",
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "test": "turbo run test",
+    "clean": "turbo run clean",
     "format": "pnpm run prettier -- --write",
-    "lint": "tsdx lint",
-    "prepare": "tsdx build",
+    "lint": "echo \"Hello Linter\"",
+    "lint:es": "eslint packages",
+    "lint:pretty": "pnpm run prettier -- --list-different",
+    "lint:ts": "tsc --noEmit",
     "prettier": "prettier --ignore-path .gitignore \"**/*.{ts,tsx,json,md}\"",
-    "semantic-release": "semantic-release",
-    "start": "tsdx watch",
-    "test": "tsdx test",
-    "typecheck": "tsc --noEmit"
+    "semantic-release": "semantic-release"
   },
   "husky": {
     "hooks": {
@@ -52,24 +45,14 @@
       "eslint --fix"
     ]
   },
-  "dependencies": {
-    "@types/cors": "2.8.12",
-    "cors": "2.8.5"
-  },
   "devDependencies": {
     "husky": "6.0.0",
     "lint-staged": "10.5.4",
-    "next": "11.1.0",
     "prettier": "2.0.5",
     "prettier-plugin-organize-imports": "2.0.0",
-    "prettier-plugin-packagejson": "2.2.5",
     "rimraf": "3.0.2",
     "semantic-release": "18.0.0",
-    "tsdx": "0.14.1",
-    "typescript": "4.4.2"
-  },
-  "peerDependencies": {
-    "next": "^8.1.1-canary.54 || ^9.0.0 || ^10.0.0-0 || ^11.0.0 || ^12.0.0 || ^13.0.0"
+    "turbo": "1.6.3"
   },
   "packageManager": "pnpm@7.14.2",
   "volta": {

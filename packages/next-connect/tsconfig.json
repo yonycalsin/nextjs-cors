@@ -1,0 +1,4 @@
+{
+  "extends": "@next-cors/tsconfig/node.json",
+  "include": ["."]
+}

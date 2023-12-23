@@ -1,0 +1,11 @@
+{
+  "name": "@next-cors/tsconfig",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "main.js",
+  "files": [
+    "base.json",
+    "node.json"
+  ],
+  "private": true
+}
