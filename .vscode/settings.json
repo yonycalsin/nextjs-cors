@@ -3,7 +3,7 @@
   "editor.formatOnSave": true,
   "editor.rulers": [120],
   "editor.codeActionsOnSave": {
-    "source.fixAll": true
+    "source.fixAll": "explicit"
   },
   "editor.detectIndentation": false
 }
