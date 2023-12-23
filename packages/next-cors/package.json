@@ -1,0 +1,60 @@
+{
+  "name": "@next-cors/core",
+  "version": "0.0.1",
+  "description": "Nextjs-Cors is a node.js package to provide a middleware that can be used to enable CORS with various options in nextjs applications.",
+  "keywords": [
+    "nextjs-cors",
+    "express-cors",
+    "nextjs-express-cors",
+    "next-cors",
+    "cors-server",
+    "cors"
+  ],
+  "homepage": "https://github.com/yonycalsin/nextjs-cors#readme",
+  "bugs": {
+    "url": "https://github.com/yonycalsin/nextjs-cors/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yonycalsin/nextjs-cors.git"
+  },
+  "license": "MIT",
+  "author": "Yony Calsin",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "package.json",
+    "README.md"
+  ],
+  "scripts": {
+    "clean": "rimraf dist",
+    "lint:ts": "tsc --noEmit",
+    "dev": "tsup-node --watch",
+    "build": "tsup-node",
+    "test": "echo \"Testing\""
+  },
+  "lint-staged": {
+    "*.{ts,js}": [
+      "eslint --fix"
+    ]
+  },
+  "dependencies": {
+    "cors": "2.8.5"
+  },
+  "devDependencies": {
+    "@tsconfig/node20": "20.1.2",
+    "@types/cors": "2.8.17",
+    "next": "14.0.4",
+    "rimraf": "5.0.5",
+    "tsup": "8.0.1",
+    "typescript": "5.3.3"
+  },
+  "peerDependencies": {
+    "next": "^8.1.1-canary.54 || ^9.0.0 || ^10.0.0-0 || ^11.0.0 || ^12.0.0 || ^13.0.0 || ^14.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
