@@ -21,7 +21,7 @@
 
 ```bash
 # Using npm
-npm install --save nextjs-cors@latest
+npm install nextjs-cors@latest
 
 # Using yarn
 yarn add nextjs-cors@latest
