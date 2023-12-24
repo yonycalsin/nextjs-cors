@@ -2,6 +2,7 @@
   "typescript.tsdk": "node_modules\\.pnpm\\typescript@5.3.3\\node_modules\\typescript\\lib",
   "editor.formatOnSave": true,
   "editor.rulers": [120],
+  "files.eol": "\n",
   "editor.codeActionsOnSave": {
     "source.fixAll": "explicit"
   },
