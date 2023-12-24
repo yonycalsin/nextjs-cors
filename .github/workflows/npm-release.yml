@@ -1,16 +1,16 @@
-name: Release
+name: Npm Release
+
 on:
+  workflow_dispatch:
   push:
     branches:
-      - main
-  workflow_dispatch:
-    inputs:
+      - v3-develop
 
 jobs:
-  release:
-    name: Release
+  npm-release:
+    name: Npm Release
 
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
 
     strategy:
       matrix:
@@ -24,6 +24,11 @@ jobs:
         with:
           # This makes Actions fetch all Git history so that Changesets can generate changelogs with the correct commits
           fetch-depth: 0
+
+      - name: Configure Git
+        run: |
+          git config --global user.name 'Yony Calsin'
+          git config --global user.email '58490737+yonycalsin@users.noreply.github.com'
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
@@ -39,8 +44,18 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Release
+      - name: Build
+        run: pnpm run build
+
+      - name: Create Release Pull Request or Publish to npm
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          publish: pnpm release
+          version: pnpm run version-packages
+          setupGitUser: false
+          title: 'chore: version packages'
+          commit: 'chore: version packages'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: pnpm exec semantic-release
