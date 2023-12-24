@@ -2,7 +2,10 @@
   "mode": "pre",
   "tag": "beta",
   "initialVersions": {
-    "@next-cors/core": "0.0.1"
+    "@next-cors/core": "0.0.1",
+    "@next-cors/next-connect": "0.0.0"
   },
-  "changesets": []
+  "changesets": [
+    "fifty-oranges-care"
+  ]
 }
