@@ -14,7 +14,7 @@ jobs:
       matrix:
         node: ['16.x', '18.x', '20.x']
         os: [ubuntu-latest, windows-latest, macOS-latest]
-        pnpm: ['8.11.0']
+        pnpm: ['8.12.1']
 
     steps:
       - name: Checkout Repo
@@ -34,14 +34,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Format
-        run: pnpm run check-format
-
       - name: Lint
         run: pnpm run lint
 
       - name: Test
-        run: pnpm run test -- --ci --coverage --maxWorkers=2
+        run: pnpm run test
 
       - name: Build
         run: pnpm run build

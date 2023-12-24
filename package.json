@@ -1,67 +1,33 @@
 {
-  "name": "nextjs-cors",
-  "version": "0.0.0",
-  "private": false,
-  "description": "Nextjs-Cors is a node.js package to provide a middleware that can be used to enable CORS with various options in nextjs applications.",
-  "keywords": [
-    "nextjs-cors",
-    "express-cors",
-    "nextjs-express-cors",
-    "next-cors",
-    "cors-server",
-    "cors"
-  ],
-  "homepage": "https://github.com/yonycalsin/nextjs-cors#readme",
-  "bugs": {
-    "url": "https://github.com/yonycalsin/nextjs-cors/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yonycalsin/nextjs-cors.git"
-  },
-  "license": "MIT",
+  "name": "@yonycalsin/next-cors",
+  "private": true,
+  "license": "ISC",
   "author": "Yony Calsin",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "typings": "dist/index.d.ts",
-  "files": [
-    "dist",
-    "package.json",
-    "README.md"
-  ],
   "scripts": {
-    "clean": "rimraf dist",
-    "boot": "pnpm run clean && pnpm run build",
-    "typecheck": "tsc --noEmit",
-    "start": "tsup-node --watch",
-    "build": "tsup-node",
-    "test": "echo \"Testing\"",
-    "lint": "eslint src/* test/*",
-    "prepare": "pnpm run build",
-    "prettier": "prettier --ignore-path .gitignore \"**/*.{ts,tsx,json,md}\"",
-    "format": "pnpm run prettier --write",
-    "check-format": "pnpm run prettier --list-different",
-    "semantic-release": "semantic-release"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pnpm run lint",
-      "pre-push": "pnpm run typecheck"
-    }
-  },
-  "lint-staged": {
-    "*.{ts,js}": [
-      "eslint --fix"
-    ]
-  },
-  "dependencies": {
-    "cors": "^2.8.5"
+    "lib:pretty": "prettier --ignore-path .gitignore \"**/*.{js,json,ts,md}\"",
+    "build": "turbo run build",
+    "dev": "turbo run dev --no-cache --continue",
+    "test": "turbo run test --no-cache",
+    "clean": "turbo run clean",
+    "clean:force": "pnpm run clean && turbo run clean:force",
+    "lint": "run-p lint:*",
+    "lint:es": "eslint **/src/* **/test/*",
+    "lint:pretty": "pnpm run lib:pretty --list-different",
+    "fix:lint": "run-s fix:lint:*",
+    "fix:lint:pretty": "pnpm run lib:pretty --write",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "changeset publish"
   },
   "devDependencies": {
-    "@semantic-release/changelog": "^6.0.3",
-    "@semantic-release/git": "^10.0.1",
-    "@tsconfig/node20": "20.1.2",
-    "@types/cors": "^2.8.17",
+    "@changesets/changelog-github": "0.5.0",
+    "@changesets/cli": "2.27.1",
+    "@yonycalsin/prettier-config-node-typescript": "2.0.0",
+    "npm-run-all": "4.1.5",
+    "prettier": "^3.1.1",
+    "prettier-plugin-organize-imports": "^3.2.4",
+    "prettier-plugin-packagejson": "^2.4.7",
+    "turbo": "1.11.2",
     "@typescript-eslint/eslint-plugin": "^6.4.0",
     "eslint": "8.56.0",
     "eslint-config-prettier": "9.1.0",
@@ -69,44 +35,9 @@
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
     "eslint-plugin-prettier": "5.1.1",
-    "eslint-plugin-promise": "^6.0.0",
-    "husky": "^8.0.3",
-    "lint-staged": "^15.2.0",
-    "next": "^14.0.4",
-    "prettier": "^3.1.1",
-    "prettier-plugin-organize-imports": "^3.2.4",
-    "prettier-plugin-packagejson": "^2.4.7",
-    "rimraf": "^5.0.5",
-    "semantic-release": "^19.0.5",
-    "tsup": "8.0.1",
-    "typescript": "^5.3.3"
+    "eslint-plugin-promise": "^6.0.0"
   },
-  "peerDependencies": {
-    "next": "^8.1.1-canary.54 || ^9.0.0 || ^10.0.0-0 || ^11.0.0 || ^12.0.0 || ^13.0.0 || ^14.0.0"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
-  "release": {
-    "branches": [
-      "main"
-    ],
-    "plugins": [
-      "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator",
-      "@semantic-release/npm",
-      [
-        "@semantic-release/github",
-        {
-          "assets": [
-            "dist"
-          ]
-        }
-      ],
-      "@semantic-release/changelog"
-    ]
-  },
-  "packageManager": "pnpm@8.11.0",
+  "packageManager": "pnpm@8.12.1",
   "volta": {
     "node": "20.10.0"
   }
