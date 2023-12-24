@@ -4,7 +4,7 @@
   "license": "ISC",
   "author": "Yony Calsin",
   "scripts": {
-    "lib:pretty": "prettier --ignore-path .gitignore \"**/*.{js,json,ts,md}\"",
+    "lib:pretty": "prettier \"**/*.{js,json,ts,md}\"",
     "build": "turbo run build",
     "dev": "turbo run dev --no-cache --continue",
     "test": "turbo run test --no-cache",
