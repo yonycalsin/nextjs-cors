@@ -9,6 +9,9 @@
     },
     "test": {
       "outputs": []
+    },
+    "nextjs-cors#build": {
+      "dependsOn": ["@next-cors/core#build"]
     }
   }
 }
