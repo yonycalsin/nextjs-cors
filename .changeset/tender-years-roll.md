@@ -1,5 +1,5 @@
 ---
-"nextjs-cors": patch
+"nextjs-cors": minor
 ---
 
 Exporting the @next-cors/core

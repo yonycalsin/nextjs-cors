@@ -1,9 +1,10 @@
 {
   "mode": "pre",
-  "tag": "beta",
+  "tag": "alpha",
   "initialVersions": {
     "@next-cors/core": "0.0.1",
-    "@next-cors/next-connect": "0.0.0"
+    "@next-cors/next-connect": "0.1.0-alpha.0",
+    "nextjs-cors": "3.0.0-alpha.0"
   },
   "changesets": [
     "fifty-oranges-care"

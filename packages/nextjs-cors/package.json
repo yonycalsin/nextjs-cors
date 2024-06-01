@@ -1,6 +1,6 @@
 {
   "name": "nextjs-cors",
-  "version": "3.0.0-alpha.1",
+  "version": "3.0.0-alpha.0",
   "description": "Nextjs-Cors is a node.js package to provide a middleware that can be used to enable CORS with various options in nextjs applications.",
   "keywords": [
     "nextjs-cors",
